@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vadodara Municipal Corporation - Citizen Services Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="title-section">
+                        <h1>Vadodara Municipal Corporation</h1>
+                        <p>નાગરિક સેવા પોર્ટલ | Citizen Services Portal</p>
+                    </div>
+                </div>
+                <nav class="nav-desktop">
+                    <button class="nav-btn active" data-tab="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </button>
+                    <button class="nav-btn" data-tab="report">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Report Issue</span>
+                    </button>
+                    <button class="nav-btn" data-tab="track">
+                        <i class="fas fa-search"></i>
+                        <span>Track Issues</span>
+                    </button>
+                    <button class="nav-btn" data-tab="contact">
+                        <i class="fas fa-phone"></i>
+                        <span>Contact</span>
+                    </button>
+                </nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="nav-mobile">
+                <button class="nav-btn-mobile active" data-tab="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </button>
+                <button class="nav-btn-mobile" data-tab="report">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Report Issue</span>
+                </button>
+                <button class="nav-btn-mobile" data-tab="track">
+                    <i class="fas fa-search"></i>
+                    <span>Track Issues</span>
+                </button>
+                <button class="nav-btn-mobile" data-tab="contact">
+                    <i class="fas fa-phone"></i>
+                    <span>Contact</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Home Tab -->
+            <div id="home-tab" class="tab-content active">
+                <div class="hero-section">
+                    <h2>વડોદરાને વધુ સારું બનાવવા માટે સાથે મળીને કામ કરીએ</h2>
+                    <h3>Making Vadodara Better, Together</h3>
+                    <p>Report issues, track progress, and help us maintain the highest standards of public service for all citizens of Vadodara.</p>
+                </div>
+
+                <div class="services-section">
+                    <h3>Report Issues By Category</h3>
+                    <div class="services-grid">
+                        <div class="service-card" data-category="roads">
+                            <div class="service-icon blue">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h4>Roads & Infrastructure</h4>
+                            <p>Report potholes, damaged roads, broken sidewalks, and infrastructure issues.</p>
+                        </div>
+                        <div class="service-card" data-category="water">
+                            <div class="service-icon cyan">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4>Water & Sewage</h4>
+                            <p>Report water leaks, sewage problems, drainage issues, and water quality concerns.</p>
+                        </div>
+                        <div class="service-card" data-category="lighting">
+                            <div class="service-icon yellow">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Street Lighting</h4>
+                            <p>Report broken street lights, dark areas, and electrical issues in public spaces.</p>
+                        </div>
+                        <div class="service-card" data-category="waste">
+                            <div class="service-icon green">
+                                <i class="fas fa-trash"></i>
+                            </div>
+                            <h4>Waste Management</h4>
+                            <p>Report missed collections, illegal dumping, and waste management concerns.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3>How It Works</h3>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-icon blue">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4>1. Report Issue</h4>
+                            <p>Submit your issue with detailed description, photos, and location information.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon orange">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>2. Track Progress</h4>
+                            <p>Receive a unique tracking ID and monitor real-time updates on your issue.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-icon green">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h4>3. Get Resolution</h4>
+                            <p>Our team works efficiently to resolve your issue and keep you informed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <div class="action-card blue-gradient">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Submit New Issue</h3>
+                        <p>Report any municipal issue quickly and easily with our streamlined form.</p>
+                        <button class="btn-white" onclick="switchTab('report')">Report Issue</button>
+                    </div>
+                    <div class="action-card green-gradient">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Track Your Issues</h3>
+                        <p>Monitor the status and progress of all your previously submitted issues.</p>
+                        <button class="btn-white" onclick="switchTab('track')">Track Issues</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Tab -->
+            <div id="report-tab" class="tab-content">
+                <div class="form-header">
+                    <h2>Report a Municipal Issue</h2>
+                    <p>Help us improve Vadodara by reporting issues that need attention.</p>
+                </div>
+
+                <form id="issue-form" class="issue-form">
+                    <div class="form-grid">
+                        <div class="form-column">
+                            <div class="form-group">
+                                <label for="category">Issue Category *</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select a category</option>
+                                    <option value="roads">Roads & Infrastructure</option>
+                                    <option value="water">Water & Sewage</option>
+                                    <option value="lighting">Street Lighting</option>
+                                    <option value="waste">Waste Management</option>
+                                    <option value="parks">Parks & Recreation</option>
+                                    <option value="traffic">Traffic & Parking</option>
+                                    <option value="noise">Noise Complaints</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="title">Issue Title *</label>
+                                <input type="text" id="title" name="title" placeholder="Brief description of the issue" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location *</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" id="location" name="location" placeholder="Street address or landmark in Vadodara" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="priority">Priority Level</label>
+                                <select id="priority" name="priority">
+                                    <option value="low">Low - Minor inconvenience</option>
+                                    <option value="medium" selected>Medium - Needs attention</option>
+                                    <option value="high">High - Significant problem</option>
+                                    <option value="urgent">Urgent - Safety concern</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-column">
+                            <div class="form-group">
+                                <label for="description">Detailed Description *</label>
+                                <textarea id="description" name="description" placeholder="Provide a detailed description of the issue..." required rows="4"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Add Photos (Optional)</label>
+                                <div class="file-upload">
+                                    <i class="fas fa-camera"></i>
+                                    <p>Click to upload photos</p>
+                                    <span>JPG, PNG up to 10MB each</span>
+                                    <input type="file" multiple accept="image/*">
+                                </div>
+                            </div>
+
+                            <div class="alert-box">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div>
+                                    <h4>Important Note</h4>
+                                    <p>For emergency situations requiring immediate attention, please call 108 or our emergency hotline at (0265) 242-4567.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-section">
+                        <h4><i class="fas fa-user"></i> Contact Information (Optional)</h4>
+                        <div class="contact-grid">
+                            <div class="form-group">
+                                <label for="contactName">Full Name</label>
+                                <input type="text" id="contactName" name="contactName" placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address</label>
+                                <input type="email" id="contactEmail" name="contactEmail" placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number</label>
+                                <input type="tel" id="contactPhone" name="contactPhone" placeholder="+91 98765 43210">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="submit-section">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Submit Issue Report</span>
+                        </button>
+                        <p>You will receive a tracking ID to monitor your issue's progress</p>
+                    </div>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" class="success-message hidden">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Issue Submitted Successfully!</h2>
+                    <p>Thank you for reporting this issue. Our team will review it and take appropriate action.</p>
+                    <div class="tracking-info">
+                        <p>Your Tracking ID:</p>
+                        <span id="tracking-id" class="tracking-id"></span>
+                        <small>Save this ID to track your issue progress</small>
+                    </div>
+                    <div class="success-actions">
+                        <button class="btn-primary" onclick="reportNewIssue()">Report Another Issue</button>
+                        <button class="btn-secondary" onclick="switchTab('track')">Track This Issue</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track Tab -->
+            <div id="track-tab" class="tab-content">
+                <div class="track-header">
+                    <h2>Track Your Issues</h2>
+                    <p>Search and monitor the status of reported municipal issues in Vadodara.</p>
+                </div>
+
+                <div class="search-filters">
+                    <div class="search-section">
+                        <label>Search Issues</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="search-input" placeholder="Search by ID, title, or location...">
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <label>Status Filter</label>
+                        <select id="status-filter">
+                            <option value="all">All Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="resolved">Resolved</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <div class="filter-section">
+                        <label>Priority Filter</label>
+                        <select id="priority-filter">
+                            <option value="all">All Priority</option>
+                            <option value="urgent">Urgent</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="issues-list" class="issues-list">
+                    <!-- Issues will be populated by JavaScript -->
+                </div>
+
+                <div class="results-summary">
+                    <p id="results-count">Showing 0 of 0 issues</p>
+                </div>
+            </div>
+
+            <!-- Contact Tab -->
+            <div id="contact-tab" class="tab-content">
+                <div class="contact-header">
+                    <h2>Contact Municipal Departments</h2>
+                    <p>Get in touch with the right department for your specific needs in Vadodara.</p>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="emergency-section">
+                    <div class="emergency-content">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h3>Emergency Services</h3>
+                            <p>For life-threatening emergencies or situations requiring immediate response.</p>
+                            <div class="emergency-buttons">
+                                <a href="tel:108" class="emergency-btn">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Call 108</span>
+                                </a>
+                                <a href="tel:02652424567" class="emergency-btn-secondary">
+                                    <i class="fas fa-phone"></i>
+                                    <span>VMC Emergency: (0265) 242-4567</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department Directory -->
+                <div class="departments-section">
+                    <h3>Department Directory</h3>
+                    <div class="departments-grid">
+                        <div class="department-card">
+                            <div class="dept-icon blue">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h4>Roads & Infrastructure</h4>
+                            <p>Road maintenance, potholes, sidewalks, bridges, and public infrastructure in Vadodara.</p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:02652424001">(0265) 242-4001</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:roads@vmc.gov.in">roads@vmc.gov.in</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="department-card">
+                            <div class="dept-icon cyan">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4>Water & Sewage</h4>
+                            <p>Water supply, sewage systems, drainage, and water quality issues across Vadodara.</p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:02652424002">(0265) 242-4002</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:water@vmc.gov.in">water@vmc.gov.in</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="department-card">
+                            <div class="dept-icon red">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Public Safety</h4>
+                            <p>Street lighting, traffic signals, parking enforcement, and public safety in Vadodara.</p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:02652424003">(0265) 242-4003</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:safety@vmc.gov.in">safety@vmc.gov.in</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="department-card">
+                            <div class="dept-icon green">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <h4>Waste Management</h4>
+                            <p>Garbage collection, recycling, composting, and waste disposal services.</p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:02652424004">(0265) 242-4004</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:waste@vmc.gov.in">waste@vmc.gov.in</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="department-card">
+                            <div class="dept-icon emerald">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <h4>Parks & Recreation</h4>
+                            <p>Parks maintenance, recreational facilities, playgrounds, and green spaces.</p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:02652424005">(0265) 242-4005</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:parks@vmc.gov.in">parks@vmc.gov.in</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="department-card">
+                            <div class="dept-icon purple">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <h4>Traffic & Parking</h4>
+                            <p>Traffic management, parking violations, traffic signals, and road signs.</p>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:02652424006">(0265) 242-4006</a>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:traffic@vmc.gov.in">traffic@vmc.gov.in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Information -->
+                <div class="general-info">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <div class="info-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>VMC Head Office</h3>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <p><strong>Address</strong></p>
+                                    <p>Dr. Ambedkar Bhavan, RC Dutt Road<br>Alkapuri, Vadodara - 390007</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <p><strong>Main Phone</strong></p>
+                                    <a href="tel:02652424567">(0265) 242-4567</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <p><strong>General Email</strong></p>
+                                    <a href="mailto:info@vmc.gov.in">info@vmc.gov.in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <div class="info-icon green">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Office Hours</h3>
+                        </div>
+                        <div class="office-hours">
+                            <div class="hours-item">
+                                <span>Monday - Friday</span>
+                                <strong>10:30 AM - 6:00 PM</strong>
+                            </div>
+                            <div class="hours-item">
+                                <span>Saturday</span>
+                                <strong>10:30 AM - 2:00 PM</strong>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sunday</span>
+                                <strong>Closed</strong>
+                            </div>
+                            <div class="emergency-note">
+                                <p>Emergency services available 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vadodara Municipal Corporation</h3>
+                    <p>Dedicated to serving the citizens of Vadodara and improving the quality of life through responsive public services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Emergency Services</a></li>
+                        <li><a href="#">Public Records</a></li>
+                        <li><a href="#">City Council</a></li>
+                        <li><a href="#">Public Meetings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-details">
+                        <p>Emergency: 108</p>
+                        <p>VMC Office: (0265) 242-4567</p>
+                        <p>Email: info@vmc.gov.in</p>
+                        <p>Office Hours: Mon-Fri 10:30AM-6PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vadodara Municipal Corporation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
