@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMC Admin Dashboard</title>
+    <!-- External Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://1.bp.blogspot.com/-jFXfSV8gVjM/XyJa17gshaI/AAAAAAAALKk/8WjHhoHUrXYRF0juWvEneth1ZjRYQHqzACLcBGAsYHQ/s1600/VMC-Logo.jpeg"
+                alt="VMC Logo">
+            <h2>VMC Admin<span>Dashboard</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active"><i class="fa-solid fa-table-columns"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-pen"></i> Complaints</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Staff Management</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-pie"></i> Reports</a></li>
+                <li><a href="#"><i class="fa-solid fa-bullhorn"></i> Announcements</a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <h1>Dashboard Overview</h1>
+            <div class="user-profile">
+                <img src="" alt="Admin Avatar">
+                <div>
+                    <span class="user-name">Vaibhav Niranjan</span>
+                    <span class="user-role">Administrator</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="kpi-cards">
+            <div class="kpi-card">
+                <div class="card-icon icon-total"><i class="fa-solid fa-list-check"></i></div>
+                <div class="card-info">
+                    <div id="total-complaints" class="stat-number">0</div>
+                    <div class="stat-title">Total Complaints</div>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="card-icon icon-pending"><i class="fa-solid fa-hourglass-half"></i></div>
+                <div class="card-info">
+                    <div id="pending-complaints" class="stat-number">0</div>
+                    <div class="stat-title">Pending Action</div>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="card-icon icon-resolved"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="card-info">
+                    <div id="resolved-complaints" class="stat-number">0</div>
+                    <div class="stat-title">Resolved This Month</div>
+                </div>
+            </div>
+            <div class="kpi-card">
+                <div class="card-icon icon-overdue"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="card-info">
+                    <div id="overdue-complaints" class="stat-number">0</div>
+                    <div class="stat-title">Overdue Tasks</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="complaints-section">
+            <div class="section-header">
+                <h3>Live Complaint Feed</h3>
+            </div>
+            <div class="action-bar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search by ID, citizen name, or issue...">
+                </div>
+                <div class="filter-dropdown">
+                    <select id="statusFilter">
+                        <option value="All">All Statuses</option>
+                        <option value="Pending">Pending</option>
+                        <option value="InProgress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+                </div>
+            </div>
+
+            <table class="complaints-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Citizen Name</th>
+                        <th>Department</th>
+                        <th>Issue</th>
+                        <th>Submitted</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="complaints-table-body">
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Complaint Details</h2>
+            <div id="modalBody">
+                <!-- Details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your new JS file -->
+    <script src="script2.js"></script>
+</body>
+
+</html>
